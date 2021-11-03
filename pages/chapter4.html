@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>IGCSE ICT chapter 3 & 4</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <script type="text/javascript" src="../scripts/scroll.js"></script>
+  <script type="text/javascript" src="../scripts/main.js"></script>
+</head>
+  <body>
+    <div style="width: 100%; overflow: hidden;" class="header">
+      <header id="header">
+          <h1>ICT IGCSE Multipage Website Project</h1>
+      </header>
+    </div>
+
+    <nav>
+
+      <div class="bar">
+        <ul>
+          <li><a class="active" href="../index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="../pages/chapter3.html" class="dropbtn">Chapter 3</a>
+            <div class="dropdown-content">
+              <a href='#'>About</a>
+              <a href='#'>Lorem Ipsum</a>
+              <a href='#'>Lorem Ipsum</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="../pages/chapter4.html" class="dropbtn">Chapter 4</a>
+            <div class="dropdown-content">
+              <a href='#'>About</a>
+              <a href='#'>Lorem Ipsum</a>
+              <a href='#'>Lorem Ipsum</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <div class="main-content">
+
+      <h1>Chapter 3: Storage Devices and Media</h1>
+      <div class="nav">
+
+        <a href="#data-storage"><p>What is Data Storage</p></a>
+        <a href="#main-storage"><p>Main Storage</p></a>
+        <a href="#backing-storage"><p>Backing Storage</p></a>
+      </div>
+      <div id = "data-storage">
+        <h1>What is Data Storage?</h1>
+        <p>
+          Data storage is the process of writing (saving) data to a storage
+          device. By storeing the data, we make sure that we can always come back to it.
+        </p>
+
+      </div>
+      <div id = "main-storage">
+        <h1>Main Storage</h1>
+        <p>
+          Main storage is a type of storage that are used to temporarly store
+          data that will be processed by the cpu, such as the RAM
+        </p>
+
+      </div>
+      <div id = "backing-storage">
+        <h1>Backing Storage</h1>
+        <p>
+          Backing is a type of storage that are used to store data that will
+          be needed later, typically slower to access than the
+          <a href="#main-storage">main storage</a>, but useally cheaper per
+          byte. An exaple of backing storage would be a HDD
+        </p>
+
+      </div>
+    </div>
+
+
+    <footer>
+      <div id="about" class="about">
+        <h1>
+          About Website
+        </h1>
+        <p>
+          This website is created as a project for ICT
+        </p>
+
+      </div>
+      <div class="links">
+        <h1>Useful Links</h1>
+        <a href="/pages/chapter3"><p>Chapter 3</p></a>
+        <a href="/pages/chapter4"><p>Chapter 4</p></a>
+        <a href="https://gcse.com"><p>IGCSE offical website</p></a>
+        <a href="https://paper.sc"><p>Exam papers and awnser sheets</p></a>
+
+
+      </div>
+
+    </footer>
+  </body>
+
+    <script type="text/javascript">
+          document.oncontextmenu = rightClick;
+
+          function rightClick(clickEvent) {
+              clickEvent.preventDefault();
+              // return false;
+          }
+    </script>
+    <script>
+      document.onclick = hideMenu;
+      document.oncontextmenu = rightClick;
+
+      function hideMenu() {
+          document.getElementById("contextMenu")
+                  .style.display = "none"
+      }
+
+      function rightClick(e) {
+          e.preventDefault();
+
+          if (document.getElementById("contextMenu")
+                  .style.display == "block")
+              hideMenu();
+          else{
+              var menu = document.getElementById("contextMenu")
+
+              menu.style.display = 'block';
+              menu.style.left = e.pageX + "px";
+              menu.style.top = e.pageY + "px";
+          }
+      }
+    </script>
+    <script>
+      function copyLink() {
+        navigator.clipboard.writeText(document.URL);
+      }
+      function goBack() {
+        history.back()
+      }
+      function goForward() {
+        window.history.go(1)
+      }
+    </script>
+  <div id="contextMenu" class="context-menu" style="display: none">
+    <ul>
+      <li><a href="javascript:goBack()">Back</a></li>
+      <li><a href="javascript:goForward()" >Forward</a></li>
+      <li><a href="javascript:location.reload(true)">Refresh</a></li>
+      <li><a href="#top">Back to Top</a></li>
+
+      <div></div>
+      <li><a href="#main-storage">Main Storage</a></li>
+      <li><a href="#data-storage">What is Data Storage</a></li>
+      <li><a href="#backing-storage">Backing Storage</a></li>
+      <div></div>
+      <li><a onclick="copyLink()" href="javascript:void(0)">Copt link to page</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/chapter3.html">Chapter 3</a></li>
+      <li><a href="../pages/chapter4.html">Chapter 4</a></li>
+    </ul>
+  </div>
+</html>

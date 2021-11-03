@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html style="font-family: 'Segoe UI', sans-serif;">
+  <head>
+    <meta charset="utf-8">
+    <title>IGCSE ICT chapter 3</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <script type="text/javascript" src="../scripts/scroll.js"></script>
+  </head>
+  <body>
+    <div style="width: 100%; overflow: hidden;" class="header">
+      <header id="header">
+          <h1>ICT IGCSE Multipage Website Project</h1>
+      </header>
+    </div>
+
+    <nav>
+
+      <div class="bar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="../pages/chapter3.html" class="dropbtn active">Chapter 3</a>
+            <div class="dropdown-content">
+              <a href='../pages/chapter3.html#1'>Backing up of data</a>
+              <a href='../pages/chapter3.html#2'>Types of access</a>
+              <a href='../pages/chapter3.html#3'>Secondary storage media</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <div class="main-content">
+
+      <h1>Chapter 3: Storage Devices and Media</h1>
+      <div class="nav">
+
+        <a href="./chapter3-1.html#1"><p>Backing up of data</p></a>
+        <a href="./chapter3-2.html#2"><p>Types of access</p></a>
+        <a href="./chapter3-3.html#3"><p>Secondary storage media</p></a>
+      </div>
+
+      <div>
+        <h3 id="2.1">Serial access</h3>
+        <p>
+          When using serial access it is necessary to start at the beginning
+          of the file and then access each record in turn until the required
+          record is found. In the example above, to find the record for car
+          15, it is necessary to first read all of the preceding records (that
+           is, 1 to 14) until the required record is located.
+        </p>
+        <img
+        src="../images/tape_cassette.jpg"
+        alt="tape cassette image"
+        style="
+        float: left;
+        border: solid black 2px;
+        margin: 10px 20px 5px 10px ;
+        border-radius: 5px;
+        padding: 5px;">
+        <p>
+          It is primarily used on magnetic tape systems and is essentially a
+          very slow form of data access. It is used in applications where
+          speed of access, or where the order in which the data is accessed,
+          isn't important (for example in utility billing, clearing back
+          cheques, or producing payslips).
+        </p>
+        <p>When the original magnetic tape (called the master file) needs
+          updating, an additional tape (called a transaction file) is
+          required. The transaction file contains all the new data to allow
+          the master file to be updated (although the transaction file is very
+          often another tape, the new data could be stored on a different
+          medium). The updated tape is referred to as the new master file.
+          When using tapes, the records on both master file and transaction
+          file must be sorted in the same order (for example, sorted by
+          customer number if it is a billing application — the field used to
+          sort the records is often referred to as a key field).
+        </p>
+        <img
+        src="../images/magnetic_tape_backup.jpg"
+        alt="magnetic tape backup image"
+        style="
+        float: right;
+        border: solid black 2px;
+        margin: 10px 20px 5px 10px ;
+        border-radius: 5px;
+        padding: 5px;">
+        <p>
+          This is an example of how a master file (MF) can be updated using a
+          Transaction File (TF). The scenario here is a book shop that sells
+          books. All of the books held in stock are stored on the MF in ISBN
+          order — the ISBN acts as the key field for each record (each
+          different book title will have its record made up of the ISBN, title
+          of the book, author, genre, cost price, and selling price). All the
+          changes during the day will be stored on the TF — if a book sells,
+          if new books come in, if a book is out of print, and so on. At the
+          end of each day, the MF is updated using the new data stored on the
+          TF. The basic steps in the update process are shown below:
+        </p>
+        <ul>
+          <li>
+            At the end of the day, the TF is sorted in the same order as the
+            MF (this will be done using the ISBN which is known here as the key
+            field)
+          </li>
+          <li>
+            A new master file (NMF) is created to store the updated records
+            of the books in the shop<
+          </li>
+          <li>
+            the first record in the TF is then read and the first record in the
+            MF is also read
+            <ul>
+              <li>
+                The two records are compared with each other
+              </li>
+              <li>
+                If the key field on the MF is bigger than the key field on the
+                TF, then no transactions took place, and the MF record is
+                written to the NMF; a new MF record is now read
+              </li>
+              <li>
+                If the key field on the MF is the same the key field on the TF,
+                then a transaction took place and the new record from the TF is
+                written to the NMF; the next record from both the MF and TF are
+                now read
+              </li>
+              <li>
+                If the the transaction file indicates a deletion then the record
+                is simply not written to the NMF and a new record from each file
+                is read
+              </li>
+              <li>
+                If the key field on the MF is greater than the key field on the
+                TF, then the record doesn't yet exist and a new record is
+                created on the NMF and the record is written from the TF to the
+                NMF; a new Tf record is now read
+              </li>
+
+            </ul>
+          </li>
+          <li>
+            The process is repeated untill the end of the MF
+          </li>
+          <li>
+            Finally, any remaining records on the TF are written to the NMF
+          </li>
+
+        </ul>
+        <p class="bold">Example</p>
+        <p>
+          The Master File (MF) contains the following records with key fields
+          shown:
+        </p>
+        <table>
+          <tbody>
+            <tr class="orange">
+              <td class="1st-record">1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>6</td>
+              <td>8</td>
+              <td>9</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The Transaction File (TF) contains the following records with key
+          fields shown:
+        </p>
+        <table>
+          <tbody>
+            <tr class="green">
+              <td class="1st-record">1</td>
+              <td>2</td>
+              <td>4</td>
+              <td>5</td>
+              <td>7</td>
+              <td>8</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The <span class="1st-record">first record</span> from each file is
+          read. The key field both match, so the record with key field 1 is
+          written from the TF to the new master file (NMF):
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The second record is then read from the MF and the TF; again the keys
+          are equal so the record on the TF with the kwy field 2 is now written
+          to the NMF
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td class="green">2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The third record is then read from the MF and TF; this time the key
+          fields are different (3 and 4). The MF key is smaller than the TF key,
+          so the MF record with key 3 is now written to the NMF:
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td class="green">2</td>
+              <td class="orange">3</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The next record from the MF is read This time they are both 4 so the
+          record on the TF is written to the NMF:
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td class="green">2</td>
+              <td class="orange">3</td>
+              <td class="green">4</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The next record from both MF and TF are read (6 and 5). The MF key is
+          greater than the TF key, so a new record is created with key field 5.
+          The new record is written to the NMF from the TF:
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td class="green">2</td>
+              <td class="orange">3</td>
+              <td class="green">4</td>
+              <td class="green">5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The next record on the TF is read. Again they are different
+          (6 and 7). THe MF key is smaller than the TF key, so the MF record
+          with key 6 is now written to the NMF:
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td class="green">2</td>
+              <td class="orange">3</td>
+              <td class="green">4</td>
+              <td class="green">5</td>
+              <td class="orange">6</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          This process continues untill all the records have been checked and
+          the final NMF emerges
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td class="green">1</td>
+              <td class="green">2</td>
+              <td class="orange">3</td>
+              <td class="green">4</td>
+              <td class="green">5</td>
+              <td class="orange">6</td>
+              <td class="green">7</td>
+              <td class="green">8</td>
+              <td class="orange">9</td>
+              <td class="green">10</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+
+      <div class="bottom-nav">
+        <a href="./chapter3-1.html" class="back-btn">
+          <div>Back</div>
+        </a>
+        <a href="./chapter3-3.html" class="next-btn">
+          <div>Next</div>
+        </a>
+      </div>
+    </div>
+
+
+    <footer>
+      <div id="about" class="about">
+        <h1>
+          About Website
+        </h1>
+        <p>
+          This website is created as a project for ICT
+        </p>
+        <p>
+          Email : <a href="mailto:25ericbao@lannaist.ac.th">
+            25ericbao@lannaist.ac.th
+          </a>
+
+        </p>
+        <p>
+          Discord : eroc#3478
+        </p>
+      </div>
+      <div class="links">
+        <h1>Useful Links</h1>
+        <a href="../pages/chapter3.html"><p>Chapter 3</p></a>
+        <a href="../pages/chapter4.html"><p>Chapter 4</p></a>
+        <a href="https://gcse.com"><p>IGCSE offical website</p></a>
+        <a href="https://paper.sc"><p>Exam papers and awnser sheets</p></a>
+
+
+      </div>
+
+    </footer>
+  </body>
+</html>
