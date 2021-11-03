@@ -1,0 +1,276 @@
+
+/*color themes
+3daee9 Active
+93cee9 Active Hover
+
+5ebbed
+1d99f3
+
+*/
+:root {
+  --button: #3daee9;
+  --button-hover: #5ebbed;
+  --text: black;
+  --text-dark: white;
+  --navbar:
+}
+html {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI";
+  overflow-x:hidden;
+}
+body {
+  margin: 0px;
+  align-self: center;
+}
+header {
+  text-align: center;
+
+  top: 0;
+  position: sticky;
+  font-size: 30px;
+  background-image: url("../images/backdrop.png");
+  background-size: cover;
+  color: black;
+  padding: 35px 0px 40px 0px;
+  transition-duration: 0.5s;
+
+  overflow-y: hidden;
+
+
+}
+header h1 {
+  font-family: "Segoe UI";
+  font-weight: 400;
+}
+div.header {
+
+}
+header:hover {
+  overflow-y: hidden;
+}
+span.1st-record:hover {
+  color: white;
+}
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 10px 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.next-btn {
+  padding: 5px;
+  font-weight: 100;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--button);
+}
+.next-btn:hover{
+  background-color: var(--button-hover);
+}
+.back-btn {
+  font-weight: 100;
+  padding: 5px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: var(--button);
+}
+.back-btn:hover {
+  background-color: var(--button-hover);
+}
+div.main-content div.nav{
+  text-align: left;
+}
+div.main-content h1 {
+  font-weight: 400;
+  text-align: center;
+}
+div.main-content div {
+  text-align: left;
+}
+div.main-content {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 710px;
+  display: block
+}
+div.main-content .nav a {
+  text-decoration: none;
+  background-color: rgba(204, 225, 225, 0.5);
+}
+div.main-content p {
+  font-size: 1.2rem;
+}
+div.main-content li {
+  font-size: 1.2rem;
+}
+div.main-content h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+div.main-content h2 {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+div.main-content h3 {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+div.main-content h4 {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+div.main-content td {
+  font-size: 1.2rem;
+}
+
+div.main-content div.nav ul li {
+  list-style: none;
+  padding: 5px;
+}
+div.main-content ul {
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 10%;
+}
+div.main-content li {
+  padding: 10px;
+}
+.accordion, .sub-accordion{
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+
+}
+
+
+.active, .accordion:hover, .sub-accordion:hover {
+  background-color: #ccc;
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: auto;
+  transition: max-height 0.2s ease-out;
+}
+
+.orange {
+  background-color: #ffcc66;
+}
+.green {
+  background-color: #00cc66;
+}
+table , tbody td {
+  border: 1px solid black;
+  padding: 4px;
+
+  border-collapse: collapse;
+}
+thead, thead td{
+  border: 0px;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+  cursor: default;
+}
+
+footer {
+  background-color: rgba(225, 225, 225, 0.5);
+  border-width: 10px;
+  width: 100%;
+  border-color: rgba(225, 225, 225, 0.7);
+}
+
+footer div {
+  display: inline-block;
+  height: 250px;
+  overflow: auto;
+  background-color: rgba(225, 225, 225, 0);
+
+}
+footer div li {
+  list-style: none;
+  padding: 5px;
+}
+footer div.links p{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 5px;
+
+  font-size: 15px;
+}
+footer div.links a {
+  text-decoration: none;
+  color: black;
+
+
+}
+footer div.links p:hover {
+  font-size: 15px;
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.about{
+
+  width: 60%;
+  padding: 10px;
+
+}
+.links{
+
+  width: 30%;
+  padding: 10px;
+
+
+
+}
+
+@media screen and (max-width: 1000px) {
+  div.main-content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .links{
+    width: 90%;
+
+  }
+  .about{
+    width: 100%;
+  }
+  footer {
+    display: block;
+    text-align: center;
+  }
+  footer div{
+    height: auto;
+  }
+  div.main-content {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  header {
+    background-size: auto;
+  }
+}

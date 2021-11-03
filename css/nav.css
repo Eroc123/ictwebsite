@@ -1,0 +1,154 @@
+
+@supports ( backdrop-filter: blur(10px) ){
+  nav a.active{
+    text-decoration: none;
+    color: black;
+    background-color: rgba(225, 225, 225, 0.7);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+  }
+  nav a:hover, .dropbtn{
+    background-color: rgba(225, 225, 225, 0.5);
+  }
+  nav div.dropdown-content {
+    background: rgba(225, 225, 225, 0.5);
+    backdrop-filter: blur(20px);
+  }
+
+  nav li a, .dropbtn {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(225, 225, 225, 0);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+  }
+  nav li.dropdown {
+    display: inline-block;
+
+  }
+
+  nav .dropdown-content {
+    display: none;
+    background-color: rgba(225, 225, 225, 0.5);
+    border-radius: 3px;
+  }
+
+  .dropdown-content a {
+    display: inline-block;
+    text-align: left;
+    background-color: rgba(225, 225, 225, 0);
+    border-radius: 3px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: inline-block;
+  }
+  nav {
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+
+    margin: 0px;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background-color: rgba(225, 225, 225, 0.3);
+    text-align: left;
+    position: sticky;
+  }
+}
+
+@supports not ( backdrop-filter: blur(10px) ){
+  nav a.active{
+    text-decoration: none;
+    color: black;
+    background-color: rgba(225, 225, 225, 0.7);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+  }
+  nav a:hover, .dropbtn{
+    background-color: rgba(225, 225, 225, 0.5);
+  }
+  nav div.dropdown-content a:hover{
+    background: rgba(225, 225, 225, 0.5);
+  }
+
+  nav li a, .dropbtn {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(225, 225, 225, 0);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+  }
+  nav li.dropdown {
+    display: inline-block;
+
+  }
+
+  nav .dropdown-content {
+    top: 40px;
+    display: none;
+    position: absolute;
+    background-color: rgb(245, 245, 245);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 3px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    text-align: left;
+    background-color: rgba(225, 225, 225, 0);
+    border-radius: 3px;
+    margin: 3px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  nav {
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+
+    margin: 0px;
+    top: 0;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+    position: sticky;
+  }
+}
+nav li {
+  list-style-type: none;
+  list-style: unset;
+  display: inline-block;
+
+}
+nav li a {
+  border-radius: 3px;
+  margin: 3px;
+
+}
+@media screen and (max-width: 400px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  nav a {
+    text-align: center;
+    float: none;
+  }
+}
