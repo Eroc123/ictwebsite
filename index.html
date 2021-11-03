@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="../scripts/scroll.js"></script>
+    <script type="text/javascript" src="./home.js"></script>
+
+    <title>IGCSE ICT chapter 3</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header id="header">
+      <h1>IGCSE ICT Chapter 3</h1>
+    </header>
+
+
+
+
+    <main>
+        <div id = "chapter3" class="box active">
+          <div class="item">
+            <div>
+              <h1>Chapter 3</h1>
+              <p>Storage Devices and Media</p>
+            </div>
+            <h2 class="sign"></h2>
+          </div>
+        </div>
+        <div class="panel" style="display: block;">
+
+          <div class="subitem">
+            <a href="pages/chapter3-1.html">
+            <div>
+              <h1>Backing up Data</h1>
+              <p>What it is any why do it</p>
+            </div>
+            </a>
+          </div>
+
+
+          <div class="subitem">
+            <a href="pages/chapter3-2.html">
+            <div>
+              <h1>Types of access</h1>
+              <p>Different ways storage can be accessed</p>
+            </div>
+            </a>
+          </div>
+
+
+          <div class="subitem">
+            <a href="pages/chapter3-3.html">
+            <div>
+              <h1>Secondary storage media</h1>
+              <p>Different medias that data can be stored</p>
+            </div>
+            </a>
+          </div>
+
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+      <div id="about" class="about">
+        <h1>
+          About Website
+        </h1>
+        <p>
+          This website is created as a project for ICT
+        </p>
+      </div>
+      <div class="links">
+        <h1>Useful Links</h1>
+        <a href="./pages/chapter3.html"><p>Chapter 3</p></a>
+        <a href="./pages/chapter4.html"><p>Chapter 4</p></a>
+        <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-information-and-communication-technology-0417/"><p>IGCSE offical website</p></a>
+        <a href="https://paper.sc"><p>Exam papers and awnser sheets</p></a>
+
+
+      </div>
+
+    </footer>
+    <script>
+      var acc = document.getElementsByClassName("box");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+
+
+
+
+
+</html>

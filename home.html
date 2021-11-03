@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>IGCSE ICT chapter 3 & 4</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home.css">
+    <script type="text/javascript" src="home.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script type="text/javascript">
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop >  window.innerHeight-100 || document.documentElement.scrollTop >  window.innerHeight-100) {
+          document.getElementById("header").style.display = "none";
+          anicontent()
+
+        } else {
+          document.getElementById("header").style.display = "block";
+        }
+      }
+      function anicontent() {
+        var contentdiv = document.getElementById('content');
+        contentdiv.style.left = contentdiv.clientWidth;
+
+
+      }
+
+    </script>
+  </head>
+
+  <body onload="javascript:animate()">
+    <div class="head" id="head">
+      <header>
+        <h1 id="header">IGCSE ICT Chapter <br>3 and 4</h1>
+        <img src="./images/down.png" alt="Down arrow" id="downarrow">
+      </header>
+
+
+    </div>
+
+    <div class="content" id="content" >
+      <h2>Chapter 3 - Storage devices and media</h2>
+      <p>In this chapter, you will learn about:</p>
+      <ul>
+        <li>Backing storage</li>
+        <li>Why back up data?</li>
+        <li>Types of access used by secondary storage devices</li>
+        <li>
+          types of internal and external secondary storage devices:
+        </li>
+        <ul>
+          <li>magnetic</li>
+          <li>optical</li>
+          <li>sloid state</li>
+        </ul>
+      </ul>
+
+
+
+      <div class="head">
+          <h1  id="nav">IGCSE ICT Chapter <br>3 and 4</h1>
+                <h1>Chapter 3</h1>
+                <p>Storage Devices and Media</p>
+              <h2 class="sign"></h2>
+            <a href="pages/chapter3.html#1">
+                <h1>Backing up Data</h1>
+                <p>What it is any why do it</p>
+            </a>
+            <a href="pages/chapter3.html#2">
+                <h1>Types of access</h1>
+                <p>Different ways storage can be accessed</p>
+            </a>
+            <a href="pages/chapter3.html#3">
+            <div class="subitem">
+                <h1>Secondary storage media</h1>
+            </a>
+      </div>
+
+    </div>
+
+
+  </body>
+
+</html>

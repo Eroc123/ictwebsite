@@ -1,0 +1,218 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: lighter;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0px;
+  align-self: center;
+}
+
+/*Header css*/
+header {
+  text-align: center;
+  top: 0;
+
+  font-size: 1.5rem;
+  background-image: url("./images/backdrop.png");
+  background-size: cover;
+  color: #FFFFFF;
+  transition-duration: 0.5s;
+  overflow-y: hidden;
+  z-index: 100;
+}
+header h1 {
+  font-weight: 500;
+}
+header:hover {
+  overflow-y: hidden;
+  background-color: rgb(204, 225,0);
+  cursor: default;
+}
+/*End of header css*/
+
+/*main css*/
+main{
+  margin-left: 10px;
+  margin-right: 19px;;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+main div.box {
+  display: flex;
+  width: 80%;
+  margin-right: 100px;
+  border-radius: 5px;
+  padding: 5px;
+  width:100%;
+}
+main div.active {
+  padding-bottom: 0px;
+}
+main div.item .sign{
+  text-align: right;
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  height:37px;
+
+}
+main .panel {
+  display: flex;
+  padding: 0px 15px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  margin-left: auto;
+
+}
+main div.panel a{
+  color: black;
+  text-decoration: none;
+}
+main div.panel p{
+  color: black;
+  text-decoration: none;
+}
+main div.item {
+  display: flex;
+  width:100%;
+  margin: 0px 10px 0px 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(100, 100, 100, 0.1);
+  display: flex;
+}
+
+main div.item:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+  cursor: pointer;
+}
+main div.subitem {
+  display: flex;
+  width:100%;
+  margin: 2px 0px 2px 0px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(100, 100, 100, 0.1);
+  display: flex;
+}
+
+main div.subitem:hover {
+  background-color: rgba(100, 100, 100, 0.2);
+  cursor: pointer;
+}
+main h1 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+main p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: rgb(50, 50, 50);
+  width: 100%;
+
+}
+/*End of main css*/
+
+footer {
+  background-color: rgba(225, 225, 225, 0.5);
+  border-width: 10px;
+  width: 100%;
+  border-color: rgba(225, 225, 225, 0.7);
+}
+
+footer div {
+  display: inline-block;
+  height: 250px;
+  overflow: auto;
+  background-color: rgba(225, 225, 225, 0);
+
+}
+footer div li {
+  list-style: none;
+  padding: 5px;
+}
+footer div.links p{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 5px;
+
+  font-size: 15px;
+}
+footer div.links a {
+  text-decoration: none;
+  color: black;
+
+
+}
+footer div.links p:hover {
+  font-size: 15px;
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.about{
+
+  width: 60%;
+  padding: 10px;
+
+}
+.links{
+
+  width: 30%;
+  padding: 10px;
+
+
+
+}
+
+@media screen and (max-width: 750px) {
+  .links{
+    width: 100%;
+
+  }
+  .about{
+    width: 100%;
+  }
+  footer {
+    display: block;
+    text-align: center;
+  }
+  footer div{
+    height: auto;
+  }
+}
+@media screen and (min-width: 920px) {
+  main div.box{
+    width: 900px;
+  }
+  main div.subitem{
+    width: 860px;
+  }
+}
+@media screen and (max-width: 940px) {
+  main div.box{
+    width: 100%;
+  }
+  main div.subitem{
+    width: 100%;
+  }
+
+
+}
+@media screen and (max-width: 1500px) {
+  header {
+    background-size: auto;
+  }
+}
