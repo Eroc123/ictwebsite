@@ -52,7 +52,36 @@ header h1 {
 div.content {
   z-index: 200;
   border-radius: 5px;
-  
+
+
+}
+#page-links h1{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+#page-links p{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+
+}
+#page-links div{
+  padding: 2px;
+  margin: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 5px;
+  background-color: rgba(125, 125, 125, 0.1);
+}
+#page-links a{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+
+}
+#page-links div:hover{
+  background-color: rgba(125, 125, 125, 0.3);
 
 }
 
