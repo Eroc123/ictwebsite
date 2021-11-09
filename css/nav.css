@@ -29,7 +29,7 @@
     margin: 0px;
   }
   nav li.dropdown {
-    display: inline-block;
+    display: block;
 
   }
 
@@ -41,6 +41,7 @@
 
   .dropdown-content a {
     display: inline-block;
+    overflow: scroll;
     text-align: left;
     background-color: rgba(225, 225, 225, 0);
     border-radius: 3px;
@@ -48,6 +49,7 @@
 
   .dropdown:hover .dropdown-content {
     display: inline-block;
+    overflow: scroll;
   }
   nav {
     padding-top: 1px;
@@ -60,6 +62,9 @@
     background-color: rgba(225, 225, 225, 0.3);
     text-align: left;
     position: sticky;
+  }
+  nav div {
+    overflow: scroll;
   }
 }
 
