@@ -55,18 +55,18 @@ div.content {
 
 
 }
-#page-links h1{
+.dropdown h1{
   text-align: center;
   text-decoration: none;
   color: black;
 }
-#page-links p{
+.dropdown p{
   text-align: center;
   text-decoration: none;
   color: black;
 
 }
-#page-links div{
+.dropdown div{
   padding: 2px;
   margin: 10px;
   margin-left: 20%;
@@ -74,13 +74,13 @@ div.content {
   border-radius: 5px;
   background-color: rgba(125, 125, 125, 0.1);
 }
-#page-links a{
+.dropdown a{
   text-align: center;
   text-decoration: none;
   color: black;
 
 }
-#page-links div:hover{
+.dropdown div:hover{
   background-color: rgba(125, 125, 125, 0.3);
 
 }
