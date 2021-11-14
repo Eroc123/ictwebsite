@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Where I'm From by Eric</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop >  window.innerHeight-100 || document.documentElement.scrollTop >  window.innerHeight-100) {
+          document.getElementById("header").style.display = "none";
+          anicontent()
+
+        } else {
+          document.getElementById("header").style.display = "block";
+        }
+      }
+      function anicontent() {
+        var contentdiv = document.getElementById('content');
+        contentdiv.style.left = contentdiv.clientWidth;
+      }
+    </script>
+
+    <style>
+      html, body {
+        overflow-x: hidden;
+        padding: 0px;
+        margin: 0px;
+        font-family: "Segoe UI";
+      }
+      body {
+        overflow: hidden;
+      }
+      div.head {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("https://eroc123.github.io/backdrop.png");
+        background-size: cover;
+        position:relative;
+        width: 100%;
+        height: 100px;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        z-index: -1;
+      }
+      header h1 {
+        width: 100%;
+        align-items: center;
+        position: fixed;
+        transition-duration: 0.5s;
+        text-align: center;
+        font-weight: 500;
+        font-family: "Segoe UI";
+        font-size: 4rem;
+        color: #FFFFFF;
+        overflow: hidden;
+        z-index: -4;
+      }
+
+
+      div.content {
+        z-index: 200;
+        border-radius: 5px;
+
+      }
+
+      div.content h2 {
+        text-align: center;
+      }
+      div.content p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+      }
+      div.content ul {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%
+      }
+      div.content ul ul{
+        width: 100%;
+      }
+      /*bookmarks styling*/
+      /*windows 11 like themeing*/
+      div.bookmarks div.item .sign{
+        text-align: right;
+        float: right;
+        padding: 0px;
+        margin: 0px;
+        height:37px;
+
+      }
+      div.bookmarks .panel {
+        display: block;
+        background-color: white;
+        display: block;
+        overflow: hidden;
+        margin-left: auto;
+
+      }
+      div.bookmarks div.panel a{
+        color: black;
+        text-decoration: none;
+      }
+      div.bookmarks div.panel p{
+        color: black;
+        text-decoration: none;
+      }
+      div.bookmarks div.item {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: rgba(100, 100, 100, 0.1);
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      div.bookmarks div.item:hover {
+        background-color: rgba(100, 100, 100, 0.2);
+        cursor: pointer;
+      }
+      div.bookmarks div.subitem {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: rgba(100, 100, 100, 0.1);
+        display: block;
+      }
+
+      div.bookmarks div.subitem:hover {
+        background-color: rgba(100, 100, 100, 0.2);
+        cursor: pointer;
+      }
+      div.bookmarks h1 {
+        font-weight: normal;
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+      div.bookmarks p {
+        padding: 0px;
+        margin: 0px;
+        font-size: 0.75rem;
+        font-weight: normal;
+        color: rgb(50, 50, 50);
+        width: 100%;
+      }
+      header h1 span {
+        font-size: 1.5rem;
+        margin-top: 0px;
+      }
+      header h1 {
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: 1rem;
+      }
+      div.content {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      a.button {
+        text-decoration: none;
+        background-color: #9BABDE;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        text-align: center;
+
+
+      }
+      a.button:hover {
+        background-color: #A6C9E7;
+      }
+      @media (max-width: 800px) {
+        div.content p {
+          font-size: 4rem;
+          width: 100%;
+          text-align: center;
+        }
+        header h1 {
+          font-size: 6rem;
+        }
+        header h1 span {
+          font-size: 3rem;
+        }
+        div.content {
+          width: 100%;
+        }
+      }
+      @media (max-width: 400px) {
+        div.content p {
+          font-size: 2rem;
+          width: 100%;
+          text-align: center;
+        }
+        header h1 {
+          font-size: 4rem;
+        }
+        header h1 span {
+          font-size: 2rem;
+        }
+        div.content {
+          width: 100%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body onload="javascript:animate()">
+
+    <div class="head" id="head">
+      <header>
+        <h1 id="header">Where I'm From <br><span>a poem by Eric</span></h1>
+
+      </header>
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I am from roasted chestnuts,
+      </p>
+      <p>
+        from maple leaves and chilling wind.
+      </p>
+      <p>
+        I am from heavy clothing and short t-shirts,
+      </p>
+      <p>
+        snowing and steaming.
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/fall.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content" >
+      <p>
+        I am from the peach tree,
+      </p>
+      <p>
+        watched it grow from a sapling,
+      </p>
+      <p>
+        yet yielded no fruit.
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/fall.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I am from small steamed buns,
+      </p>
+      <p>
+        steamed eggs, and dumplings.
+      </p>
+      <p>
+        From the cheap fast food
+      </p>
+      <p>
+        to the expansive hotpots.
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/xiaolongbao.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I’m from sunny summers
+      </p>
+      <p>
+        and cloudy winters.
+      </p>
+      <p>
+        I am from the polluted air
+      </p>
+      <p>
+        (that barely allows you to see a few paces),
+      </p>
+      <p>
+        and the vibrant clear skies.
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/pollution.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I am from the tall skyscrapers,
+      </p>
+      <p>
+        rumbling metros and honking cars.
+      </p>
+      <p>
+        From the crowded shops and fast delivery.
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/skyscraper.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I am from weird superstitions;
+      </p>
+      <p>
+        Using umbrella indoors makes you short?
+      </p>
+      <p>
+        Money should always be given in figures of eight?
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/skyscraper.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I’m from the early mornings,
+      </p>
+      <p>
+        singing anthems under flags.
+      </p>
+      <p>
+        I am from strict teachers,
+      </p>
+      <p>
+        who seems to have -
+      </p>
+      <p>
+        an unlimited supply of homework.
+      </p>
+      <p>
+        And teachers who barely give any.
+      </p>
+      <p>
+        I’m from the teachers told me to study study study,
+      </p>
+      <p>
+        and teachers that just let me play.
+      </p>
+    </div>
+    <br>
+    <div class="head" id="head" style="background-image: url(https://eroc123.github.io/study.jpg);">
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        From memorizing ABCs,
+      </p>
+      <p>
+        to chinese character,
+      </p>
+      <p>
+        and also thai alphabets
+      </p>
+      <p>
+        (that I still can't remember)
+      </p>
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        Family tree that stretches far on one side,
+      </p>
+      <p>
+        yet cut off on the other.
+      </p>
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        Spent half of my life in one place,
+      </p>
+      <p>
+        and the other in somewhere else.
+      </p>
+    </div>
+    <br>
+    <div class="content" id="content">
+      <p>
+        I guess,
+      </p>
+      <p>
+        I am from where I am at.
+      </p>
+    </div>
+    <br>
+    <audio src="voice.m4a" controls style="margin: 10px; margin-left: auto; margin-right: auto; width: 40%; display: flex;">
+    Your browser does not support the audio element.
+    </audio>
+    <a class="button" href="https://docs.google.com/document/d/1GHCTpW67a6dZBmXfwb22H1H5Y1nxOrVeMbMPEuKz0J0/edit?usp=sharing">Google docs link</a>
+
+  </body>
+  <script type="text/javascript">
+
+    async function height() {
+      var item = document.getElementsByClassName('subitem')
+      var item = document.getElementsByClassName('item')
+      var head = document.getElementsByClassName('head')
+
+      var i;
+      window.scrollTo(0, 0);
+      for (i = 0; i < head.length; i++) {
+        head[i].style.height =  window.innerHeight+'px'
+      }
+      var head = document.getElementsByClassName('ict')
+      var i;
+      for (i = 0; i < head.length; i++) {
+        head[i].style.height =  window.innerHeight+'px'
+      }
+      var i;
+      for (i = 0; i < item.length; i++) {
+        item[i].style.width =  window.innerWidth/10*8+'px'
+      }
+
+    }
+    async function animate() {
+      await height()
+
+      var headerpos = window.innerHeight;
+
+      var header = document.getElementById('header')
+      var nav = document.getElementById('content')
+      nav.style.left = "-"+nav.clientHeight+"px"
+
+      header.style.top = headerpos + "px";
+
+
+      var center = window.innerHeight/2;
+      var center = center-header.clientHeight/2;
+      console.log(center);
+      console.log(header.clientHeight);
+      animateheader(center, header)
+      await new Promise(r => setTimeout(r, 1000));
+      animatearrow()
+      console.log('Staring nav animation');
+
+    }
+    function animateheader(center, header) {
+      //Start of animation code
+      let id = null;
+      var headerpos = window.innerHeight;
+      clearInterval(id);
+      id = setInterval(frame, 5);
+      function frame() { //Animating header
+        if (headerpos < center+200) {
+          if (headerpos < center+60) {
+            if (headerpos < center+40) {
+              if (headerpos < center+20) {
+                if (headerpos < center) {
+
+                  return
+
+
+                } else {
+                  headerpos--;
+                  header.style.top = headerpos + "px";
+                }
+              } else {
+                headerpos--;
+                headerpos--;
+                header.style.top = headerpos + "px";
+              }
+            } else {
+              headerpos--;
+              headerpos--;
+              headerpos--;
+              header.style.top = headerpos + "px";
+            }
+          } else {
+            headerpos--;
+            headerpos--;
+            headerpos--;
+            headerpos--;
+            header.style.top = headerpos + "px";
+          }
+        } else {
+          headerpos--;
+          headerpos--;
+          headerpos--;
+          headerpos--;
+          headerpos--;
+          header.style.top = headerpos + "px";
+        }
+
+
+      }
+
+    }
+
+    function animatearrow() {
+      var arrow = document.getElementById('arrow')
+      arrow.classList.toggle('show')
+    }
+  </script>
+  <script>
+    function animatenav() {
+
+      //Start of animation code
+      var nav = document.getElementById('content')
+      let id = null;
+      var pos = -nav.clientWidth;
+      console.log(pos);
+      clearInterval(id);
+      id = setInterval(frame, 5);
+      function frame() { //Animating header
+        if (pos > -80) {
+            if (pos > -40) {
+                if (pos > -20) {
+                    if (pos > 0) {
+                      return;
+                    } else {
+                      pos++;
+                      nav.style.left = pos + "px";
+                    }
+
+                } else {
+                  pos++;
+                  nav.style.left = pos + "px";
+                }
+
+            } else {
+              pos++;
+              pos++;
+              nav.style.left = pos + "px";
+            }
+
+        } else {
+          pos++;
+          pos++;
+          pos++;
+          nav.style.left = pos + "px";
+        }
+    }
+  }
+
+  </script>
+</html>
